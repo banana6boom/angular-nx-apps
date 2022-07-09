@@ -25,6 +25,21 @@
             "input": "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
             "inject": false,
             "bundleName": "material-theme"
+          },
+          {
+            "input": "./node_modules/primeicons/primeicons.css",
+            "inject": false,
+            "bundleName": "prime-icons"
+          },
+          {
+            "input": "./node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+            "inject": false,
+            "bundleName": "prime-theme"
+          },
+          {
+            "input": "./node_modules/primeng/resources/primeng.min.css",
+            "inject": false,
+            "bundleName": "prime-resources"
           }
         ],
         "scripts": []
