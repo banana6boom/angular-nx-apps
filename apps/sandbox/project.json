@@ -4,11 +4,14 @@
   "prefix": "angular-nx-apps",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-builders/custom-webpack:browser",
       "outputs": [
         "{options.outputPath}"
       ],
       "options": {
+        "customWebpackConfig": {
+          "path": "./custom-webpack.config.js"
+        },
         "outputPath": "dist/apps/sandbox",
         "index": "apps/sandbox/src/index.html",
         "main": "apps/sandbox/src/main.ts",
@@ -78,7 +81,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@angular-builders/custom-webpack:dev-server",
       "configurations": {
         "production": {
           "browserTarget": "sandbox:build:production"
@@ -90,7 +93,7 @@
       "defaultConfiguration": "development"
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "@angular-builders/custom-webpack:extract-i18n",
       "options": {
         "browserTarget": "sandbox:build"
       }
