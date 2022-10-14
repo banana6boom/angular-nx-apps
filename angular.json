@@ -2,7 +2,6 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "sandbox": "apps/sandbox",
-    "sandbox-e2e": "apps/sandbox-e2e"
+    "sandbox": "apps/sandbox"
   }
 }

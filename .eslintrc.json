@@ -5,6 +5,8 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "plugins": ["sonarjs"],
+      "extends": ["plugin:sonarjs/recommended"],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
@@ -23,8 +25,30 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "parserOptions": {
+          "project": "./tsconfig.*?.json"
+        }
+      },
+      "plugins": ["@typescript-eslint", "rxjs-angular", "simple-import-sort", "import"],
+      "extends": [
+        "plugin:@nrwl/nx/typescript",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:rxjs/recommended",
+        "plugin:@ngrx/recommended",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

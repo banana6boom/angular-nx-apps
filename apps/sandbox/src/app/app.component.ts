@@ -1,4 +1,4 @@
-import { Component, VERSION, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 
 declare const APP_VERSION: unknown;
 
@@ -12,8 +12,6 @@ export class AppComponent implements OnInit {
   private angularVersion = VERSION;
 
   ngOnInit(): void {
-    console.log(
-      `Angular: ${this.angularVersion.full}; App version: ${this.appVersion}`
-    );
+    console.log(`Angular: ${this.angularVersion.full}; App version: ${this.appVersion}`);
   }
 }

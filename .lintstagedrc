@@ -1,0 +1,14 @@
+{
+  "*.{js,ts}": [
+    "npx eslint --fix --color"
+  ],
+  "*.{css,scss}": [
+    "npx stylelint --fix"
+  ],
+  "*.html": [
+    "npx prettier --write"
+  ],
+  "*.json": [
+    "npx prettier --write"
+  ]
+}

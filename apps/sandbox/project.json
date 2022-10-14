@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@angular-builders/custom-webpack:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "customWebpackConfig": {
           "path": "./custom-webpack.config.js"
@@ -18,10 +16,7 @@
         "polyfills": "apps/sandbox/src/polyfills.ts",
         "tsConfig": "apps/sandbox/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/sandbox/src/favicon.ico",
-          "apps/sandbox/src/assets"
-        ],
+        "assets": ["apps/sandbox/src/favicon.ico", "apps/sandbox/src/assets"],
         "styles": [
           "apps/sandbox/src/styles.scss",
           {
@@ -101,17 +96,12 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/sandbox/**/*.ts",
-          "apps/sandbox/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/sandbox/**/*.ts", "apps/sandbox/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/sandbox"
-      ],
+      "outputs": ["coverage/apps/sandbox"],
       "options": {
         "jestConfig": "apps/sandbox/jest.config.ts",
         "passWithNoTests": true
