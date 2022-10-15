@@ -40,7 +40,7 @@
             "bundleName": "prime-resources"
           },
           {
-            "input": "./node_modules/bulma/sass/bulma/bulma.sass",
+            "input": "./node_modules/bulma/bulma.sass",
             "inject": false,
             "bundleName": "bulma"
           }
