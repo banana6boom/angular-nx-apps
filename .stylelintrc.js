@@ -11,5 +11,12 @@ module.exports = {
   ],
   rules: {
     'plugin/no-low-performance-animation-properties': true,
+    'at-rule-no-unknown': null,
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['tailwind'],
+      },
+    ],
   },
 };

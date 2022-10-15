@@ -38,6 +38,11 @@
             "input": "./node_modules/primeng/resources/primeng.min.css",
             "inject": false,
             "bundleName": "prime-resources"
+          },
+          {
+            "input": "./node_modules/bulma/sass/bulma/bulma.sass",
+            "inject": false,
+            "bundleName": "bulma"
           }
         ],
         "scripts": []
