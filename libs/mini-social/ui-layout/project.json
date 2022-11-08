@@ -1,4 +1,5 @@
 {
+  "name": "mini-social-ui-layout",
   "projectType": "library",
   "sourceRoot": "libs/mini-social/ui-layout/src",
   "prefix": "mini-social",

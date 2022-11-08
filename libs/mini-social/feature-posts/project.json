@@ -1,4 +1,5 @@
 {
+  "name": "mini-social-feature-posts",
   "projectType": "library",
   "sourceRoot": "libs/mini-social/feature-posts/src",
   "prefix": "mini-social",
