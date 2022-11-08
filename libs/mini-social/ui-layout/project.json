@@ -5,7 +5,7 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/mini-social/ui-layout"],
+      "outputs": ["{workspaceRoot}/coverage/libs/mini-social/ui-layout"],
       "options": {
         "jestConfig": "libs/mini-social/ui-layout/jest.config.ts",
         "passWithNoTests": true

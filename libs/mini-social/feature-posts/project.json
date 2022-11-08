@@ -5,7 +5,7 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/mini-social/feature-posts"],
+      "outputs": ["{workspaceRoot}/coverage/libs/mini-social/feature-posts"],
       "options": {
         "jestConfig": "libs/mini-social/feature-posts/jest.config.ts",
         "passWithNoTests": true
