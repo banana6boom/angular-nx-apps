@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
     "start": "nx serve",
-    "mini-social": "nx run mini-social:serve",
+    "mini-social:frontend": "nx run mini-social-frontend:serve",
     "mini-social:backend": "nx run mini-social-backend:serve",
     "build": "cross-env NODE_ENV=production nx build && npm run gzip",
     "test": "nx test",
