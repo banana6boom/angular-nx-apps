@@ -18,7 +18,6 @@
         "inlineStyleLanguage": "scss",
         "assets": ["apps/sandbox/src/favicon.ico", "apps/sandbox/src/assets"],
         "styles": [
-          "apps/sandbox/src/styles.scss",
           {
             "input": "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
             "inject": false,
@@ -43,7 +42,8 @@
             "input": "./node_modules/bulma/bulma.sass",
             "inject": false,
             "bundleName": "bulma"
-          }
+          },
+          "apps/sandbox/src/styles.scss"
         ],
         "scripts": []
       },
