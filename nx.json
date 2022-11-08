@@ -20,6 +20,9 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
+    },
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
     }
   },
   "generators": {
@@ -42,6 +45,6 @@
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "sharedGlobals": [],
-    "production": ["default"]
+    "production": ["default", "!{projectRoot}/.eslintrc.json"]
   }
 }
