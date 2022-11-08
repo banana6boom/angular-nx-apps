@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.custom-card {
+  width: 100%;
+  max-width: calc(50vw - 16px * 2);
+  margin: auto;
+
+  @media screen and (max-width: 1023px) {
+    width: auto;
+    max-width: none;
+  }
+}
+
+.custom-mat-form-field {
+  width: 100%;
+}

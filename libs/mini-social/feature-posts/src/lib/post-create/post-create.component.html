@@ -1,0 +1,30 @@
+<mat-card class="custom-card">
+  <mat-card-header>
+    <mat-card-title>Create A Post</mat-card-title>
+  </mat-card-header>
+  <form #form="ngForm" (submit)="addPost(form)">
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="custom-mat-form-field">
+        <mat-label>Title</mat-label>
+        <input #title="ngModel" ngModel matInput type="text" name="title" required />
+        <mat-error *ngIf="title.invalid">Title is empty</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="custom-mat-form-field">
+        <mat-label>Your Text</mat-label>
+        <textarea
+          #content="ngModel"
+          ngModel
+          matInput
+          name="content"
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="10"
+          required
+        ></textarea>
+        <mat-error *ngIf="content.invalid">Content is empty</mat-error>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button color="primary">Save Post</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

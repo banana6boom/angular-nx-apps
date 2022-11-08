@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  margin-top: 1rem;
+}
+
+.custom-accordion {
+  display: block;
+  width: 100%;
+  max-width: 50vw;
+  margin: auto;
+
+  @media screen and (max-width: 1023px) {
+    width: auto;
+    max-width: none;
+  }
+}
