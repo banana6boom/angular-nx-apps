@@ -1,0 +1,99 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/mini-social/frontend/src",
+  "prefix": "mini-social",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/mini-social/frontend",
+        "index": "apps/mini-social/frontend/src/index.html",
+        "main": "apps/mini-social/frontend/src/main.ts",
+        "polyfills": "apps/mini-social/frontend/src/polyfills.ts",
+        "tsConfig": "apps/mini-social/frontend/tsconfig.app.json",
+        "assets": ["apps/mini-social/frontend/src/favicon.ico", "apps/mini-social/frontend/src/assets"],
+        "styles": [
+          {
+            "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+            "inject": false,
+            "bundleName": "material-theme"
+          },
+          "apps/mini-social/frontend/src/theme.scss",
+          "apps/mini-social/frontend/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/mini-social/frontend/src/environments/environment.ts",
+              "with": "apps/mini-social/frontend/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "mini-social-frontend:build:production"
+        },
+        "development": {
+          "browserTarget": "mini-social-frontend:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4000,
+        "proxyConfig": "apps/mini-social/frontend/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "mini-social-frontend:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/mini-social/frontend/**/*.ts", "apps/mini-social/frontend/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/mini-social/frontend"],
+      "options": {
+        "jestConfig": "apps/mini-social/frontend/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
