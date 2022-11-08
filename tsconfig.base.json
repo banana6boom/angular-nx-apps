@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mini-social/feature-posts": ["libs/mini-social/feature-posts/src/index.ts"],
+      "@mini-social/posts/feature-post-create": ["libs/mini-social/posts/feature-post-create/src/index.ts"],
+      "@mini-social/ui-layout": ["libs/mini-social/ui-layout/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

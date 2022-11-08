@@ -2,6 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "mini-social-backend": "apps/mini-social/backend",
+    "mini-social-feature-posts": "libs/mini-social/feature-posts",
+    "mini-social-frontend": "apps/mini-social/frontend",
+    "mini-social-ui-layout": "libs/mini-social/ui-layout",
     "sandbox": "apps/sandbox"
   }
 }
